@@ -1,0 +1,11 @@
+{% extends 'MainApp/base.html' %}
+
+{% block content %}
+<p><img class = "img-article-left thumb" src="{{posts.PLACE_PHOTO.url}}"</p>
+<h1>Название учреждения: {{posts.PLACE_NAME}}</h1>
+<h2>Адрес: {{posts.PLACE_ADRES}}</h2>
+<h2>ФИО Директора: {{posts.FIO_DIR}}</h2>
+<h2>Контактный номер: {{posts.PLACE_CONTACT_NUMBER}}</h2>
+<h3>Документы для приема: {{posts.DOCUMENTS_DLYA_PRIEMA}}</h3>
+
+{% endblock %}

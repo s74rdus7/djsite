@@ -1,0 +1,16 @@
+{% extends 'MainApp/base.html' %}
+
+{% block content %}
+<ul class="list-articles">
+    {% for p in post %}
+    <li>
+        <h2>{{p.PLACE_NAME}}</h2>
+        <p>{{p.PLACE_ADRES}}</p>
+        <p><img class = "img-article-left thumb" src="{{p.PLACE_PHOTO.url}}"</p>
+        <p class="link-read-post"><a href="{{ p.get_absolute_url }}">Подробнее</a></p>
+        <p class="link-read-post"><a href="{{p.get_employees}}">Сотрудники</a></p>
+        <p class="link-read-post"><a href="{{ p.get_event }}">События</a></p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

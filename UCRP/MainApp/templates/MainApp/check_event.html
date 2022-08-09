@@ -1,0 +1,13 @@
+{% extends 'MainApp/base.html' %}
+
+{% block content %}
+<ul class="list-articles">
+    {% for v in event %}
+    <li>
+        <p><img class = "img-article-left thumb" src="{{v.PHOTO_FROM_EVENT.url}}"</p>
+        <h2>{{v.EVENT_NAME}}</h2>
+        <p>{{v.EVENT_CREATER}}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

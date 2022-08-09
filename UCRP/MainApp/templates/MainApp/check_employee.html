@@ -1,0 +1,16 @@
+{% extends 'MainApp/base.html' %}
+
+{% block content %}
+<ul class="list-articles">
+    {% for e in employees %}
+    <li>
+        <p><img class = "img-article-left thumb" src="{{e.PHOTO_3x4.url}}"</p>
+        <h2>Имя: {{e.FIRST_NAME}}</h2>
+        <h2>Фамилия: {{e.LAST_NAME}}</h2>
+        <p>ИИН: {{e.IIN}}</p>
+        <p>Место работы: {{e.WORK_PLACE}}</p>
+        <p>Должность: {{e.JOB_TITLE}}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
